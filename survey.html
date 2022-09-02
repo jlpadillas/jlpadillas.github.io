@@ -1,0 +1,496 @@
+<html>
+
+<head>
+    <title>Satisfaction survey</title>
+
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Image with the company logo -->
+        <img src="images/logo.jpg" alt="" style="width:40px;" class="rounded"
+            onclick="javascript:window.location='index.html';" >
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="stories.html">Success stories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact us</a>
+                </li>
+                <li class="nav-item  active">
+                    <a class="nav-link" href="survey.html">Satisfaction survey</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</header>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Satisfaction survey</h1>
+                <p>Please answer the following questions to help us improve our services.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- <form action="survey.php" method="post"> -->
+                <form>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name (*)</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email (*)</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service</label>
+                        <select class="form-control" id="service" name="service">
+                            <option>Select service</option>
+                            <option>Web development</option>
+                            <option>Mobile development</option>
+                            <option>Desktop development</option>
+                            <option>Database development</option>
+                            <option>Software development</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Information text that indicates the user can choose just one of the following options -->
+                    <p>How satisfied are you with our services?</p>
+
+                    <div class="form-group">
+                        <label class="font-weight-bold col-md-12" for="rating_quest_1" data-toggle="tooltip"
+                            title="1 es la peor calificación ya que no pudo conseguir ningún objetivo y 5 es la mejor calificación ya que pudo conseguir todos sus objetivos">
+                            ¿Ha podido conseguir todos los objetivos
+                            que le fueron propuestos interactuando con el sistema web?</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_1" id="rating_q1_1"
+                                value="1">
+                            <label class="form-check-label" for="rating_q1_1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_1" id="rating_q1_2"
+                                value="2">
+                            <label class="form-check-label" for="rating_q1_2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_1" id="rating_q1_3"
+                                value="3">
+                            <label class="form-check-label" for="rating_q1_3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_1" id="rating_q1_4"
+                                value="4">
+                            <label class="form-check-label" for="rating_q1_4">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_1" id="rating_q1_5"
+                                value="5">
+                            <label class="form-check-label" for="rating_q1_5">5</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="font-weight-bold col-md-12" for="rating_quest_2" data-toggle="tooltip" title="1 es la peor calificación ya que ha empleado excesivo tiempo y 5 es la mejor calificación
+                            ya que fue muy rápido">
+                            ¿Ha tardado más tiempo del necesario en llevar a cabo las tareas que le fueron
+                            planteadas y en ocasiones se ha <i>perdido</i> dentro del sistema?
+                        </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_2" id="rating_q2_1"
+                                value="1">
+                            <label class="form-check-label" for="rating_q2_1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_2" id="rating_q2_2"
+                                value="2">
+                            <label class="form-check-label" for="rating_q2_2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_2" id="rating_q2_3"
+                                value="3">
+                            <label class="form-check-label" for="rating_q2_3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_2" id="rating_q2_4"
+                                value="4">
+                            <label class="form-check-label" for="rating_q2_4">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_2" id="rating_q2_5"
+                                value="5">
+                            <label class="form-check-label" for="rating_q2_5">5</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="font-weight-bold col-md-12" for="rating_quest_3" data-toggle="tooltip" title="1 es la peor calificación ya que no está nada satisfecho y 5 es la mejor calificación ya
+                        está totalmente satisfecho">
+                            ¿Se siente satisfecho con la forma en que el sistema permite alcanzar los objetivos
+                            propuestos?
+                        </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_3" id="rating_q3_1"
+                                value="1">
+                            <label class="form-check-label" for="rating_q3_1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_3" id="rating_q3_2"
+                                value="2">
+                            <label class="form-check-label" for="rating_q3_2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_3" id="rating_q3_3"
+                                value="3">
+                            <label class="form-check-label" for="rating_q3_3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_3" id="rating_q3_4"
+                                value="4">
+                            <label class="form-check-label" for="rating_q3_4">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_3" id="rating_q3_5"
+                                value="5">
+                            <label class="form-check-label" for="rating_q3_5">5</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="font-weight-bold col-md-12" for="rating_quest_4" data-toggle="tooltip" title="1 es la peor calificación ya que no trasmite ninguna confianza y 5 es la mejor calificación
+                        ya que trasmite total confianza">
+                            ¿El sistema le transmite confianza ya que responde según se espera de él?
+                        </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_4" id="rating_q4_1"
+                                value="1">
+                            <label class="form-check-label" for="rating_q4_1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_4" id="rating_q4_2"
+                                value="2">
+                            <label class="form-check-label" for="rating_q4_2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_4" id="rating_q4_3"
+                                value="3">
+                            <label class="form-check-label" for="rating_q4_3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_4" id="rating_q4_4"
+                                value="4">
+                            <label class="form-check-label" for="rating_q4_4">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_4" id="rating_q4_5"
+                                value="5">
+                            <label class="form-check-label" for="rating_q4_5">5</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="font-weight-bold col-md-12" for="rating_quest_5" data-toggle="tooltip" title="1 es la peor calificación ya el resultado es totalmente inútil y 5 es la mejor calificación
+                        ya que es totalmente útil">
+                            ¿Considera que el sistema es útil para conocer la empresa de desarrollo del software?
+                        </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_5" id="rating_q5_1"
+                                value="1">
+                            <label class="form-check-label" for="rating_q5_1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_5" id="rating_q5_2"
+                                value="2">
+                            <label class="form-check-label" for="rating_q5_2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_5" id="rating_q5_3"
+                                value="3">
+                            <label class="form-check-label" for="rating_q5_3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_5" id="rating_q5_4"
+                                value="4">
+                            <label class="form-check-label" for="rating_q5_4">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_5" id="rating_q5_5"
+                                value="5">
+                            <label class="form-check-label" for="rating_q5_5">5</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="font-weight-bold col-md-12" for="rating_quest_6" data-toggle="tooltip" title="1 es la peor calificación ya el resultado es totalmente desagradable y 5 es la mejor
+                        calificación ya que es totalmente placentera">
+                            ¿La interacción con el sistema se podría calificar de placentera o por el contrario es
+                            desagradable?
+                        </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_6" id="rating_q6_1"
+                                value="1">
+                            <label class="form-check-label" for="rating_q6_1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_6" id="rating_q6_2"
+                                value="2">
+                            <label class="form-check-label" for="rating_q6_2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_6" id="rating_q6_3"
+                                value="3">
+                            <label class="form-check-label" for="rating_q6_3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_6" id="rating_q6_4"
+                                value="4">
+                            <label class="form-check-label" for="rating_q6_4">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_6" id="rating_q6_5"
+                                value="5">
+                            <label class="form-check-label" for="rating_q6_5">5</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="font-weight-bold col-md-12" for="rating_quest_7" data-toggle="tooltip" title="1 es la peor calificación ya el resultado es totalmente incomodo y 5 es la mejor
+                        calificación ya que es totalmente cómodo">
+                            ¿Se ha sentido cómodo interactuando con el dispositivo?
+                        </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_7" id="rating_q7_1"
+                                value="1">
+                            <label class="form-check-label" for="rating_q7_1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_7" id="rating_q7_2"
+                                value="2">
+                            <label class="form-check-label" for="rating_q7_2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_7" id="rating_q7_3"
+                                value="3">
+                            <label class="form-check-label" for="rating_q7_3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_7" id="rating_q7_4"
+                                value="4">
+                            <label class="form-check-label" for="rating_q7_4">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_7" id="rating_q7_5"
+                                value="5">
+                            <label class="form-check-label" for="rating_q7_5">5</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="font-weight-bold col-md-12" for="rating_quest_8" data-toggle="tooltip" title="1 es la peor calificación ya en todo momento tuvo esa sensación de peligro y 5 es la
+                        mejor calificación ya nunca tuvo esa sensación de peligro">
+                            ¿En algún momento ha tenido la sensación de que el sistema podía poner en riesgo
+                            algún aspecto económico o financiero?
+                        </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_8" id="rating_q8_1"
+                                value="1">
+                            <label class="form-check-label" for="rating_q8_1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_8" id="rating_q8_2"
+                                value="2">
+                            <label class="form-check-label" for="rating_q8_2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_8" id="rating_q8_3"
+                                value="3">
+                            <label class="form-check-label" for="rating_q8_3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_8" id="rating_q8_4"
+                                value="4">
+                            <label class="form-check-label" for="rating_q8_4">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_8" id="rating_q8_5"
+                                value="5">
+                            <label class="form-check-label" for="rating_q8_5">5</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="font-weight-bold col-md-12" for="rating_quest_9" data-toggle="tooltip" title="1 es la peor calificación ya en todo momento tuvo esa sensación de peligro y 5 es la
+                        mejor calificación ya nunca tuvo esa sensación de peligro">
+                            ¿En algún momento ha tenido la sensación de que el sistema podía poner en riesgo
+                            algún aspecto relacionado con su salud o seguridad?
+                        </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_9" id="rating_q9_1"
+                                value="1">
+                            <label class="form-check-label" for="rating_q9_1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_9" id="rating_q9_2"
+                                value="2">
+                            <label class="form-check-label" for="rating_q9_2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_9" id="rating_q9_3"
+                                value="3">
+                            <label class="form-check-label" for="rating_q9_3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_9" id="rating_q9_4"
+                                value="4">
+                            <label class="form-check-label" for="rating_q9_4">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_9" id="rating_q9_5"
+                                value="5">
+                            <label class="form-check-label" for="rating_q9_5">5</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="font-weight-bold col-md-12" for="rating_quest_10" data-toggle="tooltip" title="1 es la peor calificación ya en todo momento tuvo esa sensación de peligro y 5 es la
+                        mejor calificación ya nunca tuvo esa sensación de peligro">
+                            ¿En algún momento ha tenido la sensación de que el sistema podía poner en riesgo
+                            algún aspecto relacionado con el medioambiente?
+                        </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_10" id="rating_q10_1"
+                                value="1">
+                            <label class="form-check-label" for="rating_q10_1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_10" id="rating_q10_2"
+                                value="2">
+                            <label class="form-check-label" for="rating_q10_2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_10" id="rating_q10_3"
+                                value="3">
+                            <label class="form-check-label" for="rating_q10_3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_10" id="rating_q10_4"
+                                value="4">
+                            <label class="form-check-label" for="rating_q10_4">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rating_quest_10" id="rating_q10_5"
+                                value="5">
+                            <label class="form-check-label" for="rating_q10_5">5</label>
+                        </div>
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="rating">Rating</label>
+                        <select class="form-control" id="rating" name="rating">
+                            <option>Select rating</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div> -->
+                    <div class="form-group">
+                        <label for="comment">Comment</label>
+                        <textarea class="form-control" id="comment" name="comment" rows="3"
+                            placeholder="Write..."></textarea>
+                    </div>
+
+
+                    <!-- Text that indicates the (*) fields are required -->
+                    <div class="form-group">
+                        <p class="text-muted">(*) Required fields</p>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<div class="border-top border-info col-sm-12 my-5"></div>
+
+<footer class="footer text-lg-center">
+    <div class="container flex-sm-wrap">
+        <div class="row">
+            <div class="col-lg-4">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="survey.html">Survey</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h5>Social</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.facebook.com/" alt="Facebook Logo">Facebook: <img src="images/facebook.png"
+                                alt="Facebook" width="30" height="30"></a></li>
+                    <li><a href="https://www.twitter.com/">Twitter: <img src="images/twitter.png" alt="Twitter"
+                                width="30" height="30"></a></li>
+                    <li><a href="https://www.instagram.com/">Instagram: <img src="images/instagram.png" alt="Instagram"
+                                width="30" height="30"></a></li>
+                    <li><a href="https://www.youtube.com/">YouTube: <img src="images/youtube.png" alt="YouTube"
+                                width="30" height="30"></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h5>Copyright</h5>
+                <p class="text-muted">Copyright &copy; Padilla 2022. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</html>

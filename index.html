@@ -1,18 +1,21 @@
 <html>
 
 <head>
-    <title>My First Web Page</title>
+    <title>Low Code Development</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
-
+<header>
     <div class="navigation-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <!-- Image with the company logo -->
+            <img src="images/logo.jpg" alt="" style="width:40px;" class="rounded"
+                onclick="javascript:window.location='index.html';">
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -21,12 +24,24 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="about.html">About us</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stories.html">Success stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="survey.html">Satisfaction survey</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Dropdown
@@ -40,7 +55,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
+                    </li> -->
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -49,12 +64,107 @@
             </div>
         </nav>
     </div>
+</header>
 
-    <h1>My First Web Page</h1>
-    <p>This is my first web page.</p>
+<body>
 
+    <!-- Brief info of the company -->
+    <div class="container text-xl-center">
+        <!-- Define an image for the div -->
+        <div class="align-self-center">
+            <img src="images/logo_empresa.png" class="rounded-circle img-fluid align-self-center" alt="LCD logo"
+                width="640" height="360">
+        </div>
 
+        <!-- Brief description -->
+        <div>
+            <!-- class="text-info modal-header" -->
+            <h1 class="align-self-center text-info ">End-to-end development services that deliver outstanding products
+                efficiently
+            </h1>
 
+            <h4 class="text-left">We are a team of passionate developers who love to create amazing products.
+                We
+                have been working with startups and enterprises to build their products from scratch.</h4>
+        </div>
+    </div>
+
+    <!-- Div that fill the entire width and have text inside presenting the news section -->
+    <div class="container text-xl-center">
+        <div class="text-info modal-header">
+            <h1 class="align-self-center">News</h1>
+        </div>
+
+        <!-- 2 divs that will fit the entire width of the page and will have one image at the left, and text to the right -->
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <img src="images/new_1.jpg" class="card-img-top" alt="Cinque Terre" width="304" height="236">
+                    <div class="card-body">
+                        <a href="https://startup.info/the-future-of-software-development-in-2022">
+                            <h5 class="card-title">The Future of Software Development in 2022</h5>
+                        </a>
+                        <p class="card-text text-left">Over the years, the software development world has been evolving
+                            and expanding. In fact, it's one of the areas that kept growing during the Covid-19
+                            pandemic...</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <img src="images/new_2.avif" class="card-img-top" alt="Cinque Terre" width="304" height="236">
+                    <div class="card-body">
+                        <a href="https://www.ft.com/content/75891d95-4432-4571-83df-b4cdf82d5da5">
+                            <h5 class="card-title">Apple overtakes Android to pass 50% share of smartphones used in US
+                            </h5>
+                        </a>
+                        <p class="card-text text-left">
+                            Apple has overtakenAndroid devices to account for more than half of smartphones used in the
+                            US, giving the iPhone maker an edge over its rival as it pushes into sectors including
+                            finance and healthcare...</p>
+                        <p class="card-text"><small class="text-muted">Last updated yesterday</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
+<div class="border-top border-info col-sm-12 my-5"></div>
+
+<footer class="footer text-lg-center">
+    <div class="container flex-sm-wrap">
+        <div class="row">
+            <div class="col-lg-4">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="survey.html">Survey</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h5>Social</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.facebook.com/" alt="Facebook Logo">Facebook: <img src="images/facebook.png"
+                                alt="Facebook" width="30" height="30"></a></li>
+                    <li><a href="https://www.twitter.com/">Twitter: <img src="images/twitter.png" alt="Twitter"
+                                width="30" height="30"></a></li>
+                    <li><a href="https://www.instagram.com/">Instagram: <img src="images/instagram.png" alt="Instagram"
+                                width="30" height="30"></a></li>
+                    <li><a href="https://www.youtube.com/">YouTube: <img src="images/youtube.png" alt="YouTube"
+                                width="30" height="30"></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h5>Copyright</h5>
+                <p class="text-muted">Copyright &copy; Padilla 2022. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </html>
